@@ -1,0 +1,17 @@
+# Environment
+.env
+.env.*
+
+# Composer / PHP
+vendor/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Uploads and local media
+uploads/
+
+# Logs
+*.log

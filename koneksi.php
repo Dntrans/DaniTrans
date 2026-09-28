@@ -184,13 +184,13 @@ class PostgresCompatConnection
     }
 }
 
-$driver = strtolower((string) envValue('DB_DRIVER', envValue('DATABASE_DRIVER', 'mysql')));
-$host = envValue('DB_HOST', 'localhost');
-$username = envValue('DB_USERNAME', envValue('DB_USER', 'root'));
-$password = envValue('DB_PASSWORD', envValue('DB_PASS', ''));
-$database = envValue('DB_NAME', envValue('DB_DATABASE', 'db_carter_mobil'));
+$driver = strtolower((string) envValue('DB_DRIVER', envValue('DATABASE_DRIVER', 'postgres')));
+$host = envValue('DB_HOST', 'db.imgairqftslzikveuk.supabase.co');
+$username = envValue('DB_USERNAME', envValue('DB_USER', 'postgres'));
+$password = envValue('DB_PASSWORD', envValue('DB_PASS', 'DaniTrans123@'));
+$database = envValue('DB_NAME', envValue('DB_DATABASE', 'postgres'));
 $port = envValue('DB_PORT', $driver === 'postgres' || $driver === 'supabase' ? '5432' : '3306');
-$databaseUrl = envValue('DATABASE_URL', envValue('SUPABASE_DB_URL', ''));
+$databaseUrl = envValue('DATABASE_URL', envValue('SUPABASE_DB_URL', 'postgresql://postgres:DaniTrans123%40@db.imgairqftslzikveuk.supabase.co:5432/postgres'));
 
 if ($databaseUrl !== '') {
     $driver = 'postgres';

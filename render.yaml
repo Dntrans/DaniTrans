@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: danitrans
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: DB_DRIVER
+        value: postgres
+      - key: DB_HOST
+        value: db.imgairqftslzqikveuk.supabase.co
+      - key: DB_PORT
+        value: 5432
+      - key: DB_USERNAME
+        value: postgres
+      - key: DB_PASSWORD
+        value: DaniTrans123@
+      - key: DB_NAME
+        value: postgres
+      - key: DATABASE_URL
+        value: postgresql://postgres:DaniTrans123%40@db.imgairqftslzqikveuk.supabase.co:5432/postgres
